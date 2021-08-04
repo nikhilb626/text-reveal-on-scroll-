@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        
+    }
+    section{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #262626;
+        color: #fff;
+
+    }
+
+    section .content{
+        max-width: 80%;
+
+    }
+    section .content h2{
+        position: relative;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        font-size: 3em;
+        transition: .5s;
+        transform-origin:left;
+        transform: scaleX(0);
+    }
+    section .content h2[data-scroll='in']{
+        transform: scaleX(1);
+
+    }
+
+    section .content h2:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #e02bff;
+        transform-origin: right;
+        transition: .5s;
+    }
+
+    section .content h2[data-scroll="in"]:before{
+        transform: scaleX(0);
+        transition-delay: 0.5s;
+    }
+    section .content h3{
+        position: relative;
+        margin: 5px 0 0;
+        padding: 0;
+        display: inline-block;
+        font-size: 3em;
+        transition: .5s;
+        transform-origin:right;
+        transform: scaleX(0);
+    }
+
+    section .content h3[data-scroll="in"]{
+        transform: scaleX(1);
+        transition-delay: 1s; 
+    }
+
+    section .content h3:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #ffeb3b;
+        transform-origin: left;
+        transition: .5s;
+    }
+    section .content h3[data-scroll="in"]:before{
+        transform: scaleX(0);
+        transition-delay: 1.5s;
+    }
+    section .content a{
+        position: relative;
+        background: #fff;
+        color: #262626;
+        padding: 15px 30px;
+        font-size: 16px;
+        display: inline-block;
+        text-decoration: none;
+        font-weight: 700;
+        transition: 1s;
+        opacity: 0;
+
+        }
+
+    section .content a[data-scroll="in"]{
+        transform:translateX(0);
+        transition-delay: 1s;
+        opacity: 1;
+
+    }
+        section .content p{
+            font-size: 1.2em;
+            transition: 0.5s;
+            opacity: 0;
+        }
+        section .content p[data-scroll="in"]{
+            opacity: 1;
+            transition-delay:1s;
+
+        }
+</style>
+<body>
+    <section>
+        <div class="content">
+            <h2>section one text block reveal</h2>
+            <h3>text block reveal on page scroll</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi repellat numquam, consequatur nostrum a veniam eius ullam, facere aperiam optio distinctio quod vitae! Deleniti est quibusdam itaque et nobis animi accusamus eius impedit officiis repellat! Ducimus, quia voluptate blanditiis cum dolores corporis sit exercitationem tenetur porro cupiditate. Error dolores quaerat nemo incidunt consectetur dolorum commodi illo corrupti nulla rerum quae corporis, aliquam non ducimus eligendi illum. Inventore exercitationem perferendis nostrum. Voluptatibus a unde eius aut impedit modi alias vitae, accusamus consequatur dolores eum? Velit quisquam amet at expedita vitae quibusdam minus numquam voluptate quis, laboriosam aut vero a praesentium quas nemo quia magni est magnam aliquid inventore sequi sit accusantium. Voluptates, dicta laboriosam recusandae magni modi voluptas, rem accusantium veritatis id odit iure pariatur sequi nesciunt ipsam rerum doloremque quidem voluptate soluta placeat. Iusto suscipit nam deserunt explicabo veniam totam voluptatum? Blanditiis architecto eveniet, tempora repellat quam explicabo cum voluptates laborum, aspernatur non aliquam nihil, aperiam deserunt sunt esse natus nostrum commodi placeat illum eaque. Explicabo, maiores, tempore, recusandae officiis excepturi tempora quod vitae fuga sunt ad molestias eos! Nemo voluptatem obcaecati, blanditiis soluta illo quam molestias impedit officia fuga? Odit voluptatem dolorem saepe inventore placeat, dolore eos ea eius reiciendis similique ab quae magnam excepturi id, perspiciatis molestias assumenda cupiditate quaerat totam doloribus esse iste. Molestiae voluptas accusantium ipsam possimus, quasi iusto aut iste earum rerum autem excepturi cupiditate aliquam consectetur accusamus porro beatae quod voluptatibus dolorum cumque voluptates repellat maxime distinctio! Quam facilis nulla iure deleniti ipsa velit dolore expedita voluptates dignissimos temporibus iste quibusdam rerum dolorem amet hic, sequi corporis fugiat blanditiis, minus soluta harum molestias a impedit ipsam. Sit, aut. Dolorum rem praesentium, excepturi similique minima culpa neque, nihil nisi repellendus corrupti maxime molestias. Consequatur officiis enim facere laborum. Unde, nostrum tempore dolore autem ea temporibus?</p>
+            <a href="#">Read more</a>
+        </div>
+    </section>
+    <section>
+        <div class="content">
+            <h2>section two text block reveal</h2>
+            <h3>text block reveal on page scroll</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi repellat numquam, consequatur nostrum a veniam eius ullam, facere aperiam optio distinctio quod vitae! Deleniti est quibusdam itaque et nobis animi accusamus eius impedit officiis repellat! Ducimus, quia voluptate blanditiis cum dolores corporis sit exercitationem tenetur porro cupiditate. Error dolores quaerat nemo incidunt consectetur dolorum commodi illo corrupti nulla rerum quae corporis, aliquam non ducimus eligendi illum. Inventore exercitationem perferendis nostrum. Voluptatibus a unde eius aut impedit modi alias vitae, accusamus consequatur dolores eum? Velit quisquam amet at expedita vitae quibusdam minus numquam voluptate quis, laboriosam aut vero a praesentium quas nemo quia magni est magnam aliquid inventore sequi sit accusantium. Voluptates, dicta laboriosam recusandae magni modi voluptas, rem accusantium veritatis id odit iure pariatur sequi nesciunt ipsam rerum doloremque quidem voluptate soluta placeat. Iusto suscipit nam deserunt explicabo veniam totam voluptatum? Blanditiis architecto eveniet, tempora repellat quam explicabo cum voluptates laborum, aspernatur non aliquam nihil, aperiam deserunt sunt esse natus nostrum commodi placeat illum eaque. Explicabo, maiores, tempore, recusandae officiis excepturi tempora quod vitae fuga sunt ad molestias eos! Nemo voluptatem obcaecati, blanditiis soluta illo quam molestias impedit officia fuga? Odit voluptatem dolorem saepe inventore placeat, dolore eos ea eius reiciendis similique ab quae magnam excepturi id, perspiciatis molestias assumenda cupiditate quaerat totam doloribus esse iste. Molestiae voluptas accusantium ipsam possimus, quasi iusto aut iste earum rerum autem excepturi cupiditate aliquam consectetur accusamus porro beatae quod voluptatibus dolorum cumque voluptates repellat maxime distinctio! Quam facilis nulla iure deleniti ipsa velit dolore expedita voluptates dignissimos temporibus iste quibusdam rerum dolorem amet hic, sequi corporis fugiat blanditiis, minus soluta harum molestias a impedit ipsam. Sit, aut. Dolorum rem praesentium, excepturi similique minima culpa neque, nihil nisi repellendus corrupti maxime molestias. Consequatur officiis enim facere laborum. Unde, nostrum tempore dolore autem ea temporibus?</p>
+            <a href="#">Read more</a>
+
+        </div>
+    </section>
+    <section>
+        <div class="content">
+            <h2>section three text block reveal</h2>
+            <h3>text block reveal on page scroll</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi repellat numquam, consequatur nostrum a veniam eius ullam, facere aperiam optio distinctio quod vitae! Deleniti est quibusdam itaque et nobis animi accusamus eius impedit officiis repellat! Ducimus, quia voluptate blanditiis cum dolores corporis sit exercitationem tenetur porro cupiditate. Error dolores quaerat nemo incidunt consectetur dolorum commodi illo corrupti nulla rerum quae corporis, aliquam non ducimus eligendi illum. Inventore exercitationem perferendis nostrum. Voluptatibus a unde eius aut impedit modi alias vitae, accusamus consequatur dolores eum? Velit quisquam amet at expedita vitae quibusdam minus numquam voluptate quis, laboriosam aut vero a praesentium quas nemo quia magni est magnam aliquid inventore sequi sit accusantium. Voluptates, dicta laboriosam recusandae magni modi voluptas, rem accusantium veritatis id odit iure pariatur sequi nesciunt ipsam rerum doloremque quidem voluptate soluta placeat. Iusto suscipit nam deserunt explicabo veniam totam voluptatum? Blanditiis architecto eveniet, tempora repellat quam explicabo cum voluptates laborum, aspernatur non aliquam nihil, aperiam deserunt sunt esse natus nostrum commodi placeat illum eaque. Explicabo, maiores, tempore, recusandae officiis excepturi tempora quod vitae fuga sunt ad molestias eos! Nemo voluptatem obcaecati, blanditiis soluta illo quam molestias impedit officia fuga? Odit voluptatem dolorem saepe inventore placeat, dolore eos ea eius reiciendis similique ab quae magnam excepturi id, perspiciatis molestias assumenda cupiditate quaerat totam doloribus esse iste. Molestiae voluptas accusantium ipsam possimus, quasi iusto aut iste earum rerum autem excepturi cupiditate aliquam consectetur accusamus porro beatae quod voluptatibus dolorum cumque voluptates repellat maxime distinctio! Quam facilis nulla iure deleniti ipsa velit dolore expedita voluptates dignissimos temporibus iste quibusdam rerum dolorem amet hic, sequi corporis fugiat blanditiis, minus soluta harum molestias a impedit ipsam. Sit, aut. Dolorum rem praesentium, excepturi similique minima culpa neque, nihil nisi repellendus corrupti maxime molestias. Consequatur officiis enim facere laborum. Unde, nostrum tempore dolore autem ea temporibus?</p>
+            <a href="#">Read more</a>
+
+        </div>
+    </section>
+    <section>
+        <div class="content">
+            <h2>section four text block reveal</h2>
+            <h3>text block reveal on page scroll</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi repellat numquam, consequatur nostrum a veniam eius ullam, facere aperiam optio distinctio quod vitae! Deleniti est quibusdam itaque et nobis animi accusamus eius impedit officiis repellat! Ducimus, quia voluptate blanditiis cum dolores corporis sit exercitationem tenetur porro cupiditate. Error dolores quaerat nemo incidunt consectetur dolorum commodi illo corrupti nulla rerum quae corporis, aliquam non ducimus eligendi illum. Inventore exercitationem perferendis nostrum. Voluptatibus a unde eius aut impedit modi alias vitae, accusamus consequatur dolores eum? Velit quisquam amet at expedita vitae quibusdam minus numquam voluptate quis, laboriosam aut vero a praesentium quas nemo quia magni est magnam aliquid inventore sequi sit accusantium. Voluptates, dicta laboriosam recusandae magni modi voluptas, rem accusantium veritatis id odit iure pariatur sequi nesciunt ipsam rerum doloremque quidem voluptate soluta placeat. Iusto suscipit nam deserunt explicabo veniam totam voluptatum? Blanditiis architecto eveniet, tempora repellat quam explicabo cum voluptates laborum, aspernatur non aliquam nihil, aperiam deserunt sunt esse natus nostrum commodi placeat illum eaque. Explicabo, maiores, tempore, recusandae officiis excepturi tempora quod vitae fuga sunt ad molestias eos! Nemo voluptatem obcaecati, blanditiis soluta illo quam molestias impedit officia fuga? Odit voluptatem dolorem saepe inventore placeat, dolore eos ea eius reiciendis similique ab quae magnam excepturi id, perspiciatis molestias assumenda cupiditate quaerat totam doloribus esse iste. Molestiae voluptas accusantium ipsam possimus, quasi iusto aut iste earum rerum autem excepturi cupiditate aliquam consectetur accusamus porro beatae quod voluptatibus dolorum cumque voluptates repellat maxime distinctio! Quam facilis nulla iure deleniti ipsa velit dolore expedita voluptates dignissimos temporibus iste quibusdam rerum dolorem amet hic, sequi corporis fugiat blanditiis, minus soluta harum molestias a impedit ipsam. Sit, aut. Dolorum rem praesentium, excepturi similique minima culpa neque, nihil nisi repellendus corrupti maxime molestias. Consequatur officiis enim facere laborum. Unde, nostrum tempore dolore autem ea temporibus?</p>
+            <a href="#">read more</a>
+        </div>
+    </section>
+    <section>
+        <div class="content">
+            <h2>section five text block reveal</h2>
+            <h3>text block reveal on page scroll</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi repellat numquam, consequatur nostrum a veniam eius ullam, facere aperiam optio distinctio quod vitae! Deleniti est quibusdam itaque et nobis animi accusamus eius impedit officiis repellat! Ducimus, quia voluptate blanditiis cum dolores corporis sit exercitationem tenetur porro cupiditate. Error dolores quaerat nemo incidunt consectetur dolorum commodi illo corrupti nulla rerum quae corporis, aliquam non ducimus eligendi illum. Inventore exercitationem perferendis nostrum. Voluptatibus a unde eius aut impedit modi alias vitae, accusamus consequatur dolores eum? Velit quisquam amet at expedita vitae quibusdam minus numquam voluptate quis, laboriosam aut vero a praesentium quas nemo quia magni est magnam aliquid inventore sequi sit accusantium. Voluptates, dicta laboriosam recusandae magni modi voluptas, rem accusantium veritatis id odit iure pariatur sequi nesciunt ipsam rerum doloremque quidem voluptate soluta placeat. Iusto suscipit nam deserunt explicabo veniam totam voluptatum? Blanditiis architecto eveniet, tempora repellat quam explicabo cum voluptates laborum, aspernatur non aliquam nihil, aperiam deserunt sunt esse natus nostrum commodi placeat illum eaque. Explicabo, maiores, tempore, recusandae officiis excepturi tempora quod vitae fuga sunt ad molestias eos! Nemo voluptatem obcaecati, blanditiis soluta illo quam molestias impedit officia fuga? Odit voluptatem dolorem saepe inventore placeat, dolore eos ea eius reiciendis similique ab quae magnam excepturi id, perspiciatis molestias assumenda cupiditate quaerat totam doloribus esse iste. Molestiae voluptas accusantium ipsam possimus, quasi iusto aut iste earum rerum autem excepturi cupiditate aliquam consectetur accusamus porro beatae quod voluptatibus dolorum cumque voluptates repellat maxime distinctio! Quam facilis nulla iure deleniti ipsa velit dolore expedita voluptates dignissimos temporibus iste quibusdam rerum dolorem amet hic, sequi corporis fugiat blanditiis, minus soluta harum molestias a impedit ipsam. Sit, aut. Dolorum rem praesentium, excepturi similique minima culpa neque, nihil nisi repellendus corrupti maxime molestias. Consequatur officiis enim facere laborum. Unde, nostrum tempore dolore autem ea temporibus?</p>
+            <a href="#">read more</a>
+
+        </div>
+    </section>
+    <section>
+        <div class="content">
+            <h2>section six text block reveal</h2>
+            <h3>text block reveal on page scroll</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi repellat numquam, consequatur nostrum a veniam eius ullam, facere aperiam optio distinctio quod vitae! Deleniti est quibusdam itaque et nobis animi accusamus eius impedit officiis repellat! Ducimus, quia voluptate blanditiis cum dolores corporis sit exercitationem tenetur porro cupiditate. Error dolores quaerat nemo incidunt consectetur dolorum commodi illo corrupti nulla rerum quae corporis, aliquam non ducimus eligendi illum. Inventore exercitationem perferendis nostrum. Voluptatibus a unde eius aut impedit modi alias vitae, accusamus consequatur dolores eum? Velit quisquam amet at expedita vitae quibusdam minus numquam voluptate quis, laboriosam aut vero a praesentium quas nemo quia magni est magnam aliquid inventore sequi sit accusantium. Voluptates, dicta laboriosam recusandae magni modi voluptas, rem accusantium veritatis id odit iure pariatur sequi nesciunt ipsam rerum doloremque quidem voluptate soluta placeat. Iusto suscipit nam deserunt explicabo veniam totam voluptatum? Blanditiis architecto eveniet, tempora repellat quam explicabo cum voluptates laborum, aspernatur non aliquam nihil, aperiam deserunt sunt esse natus nostrum commodi placeat illum eaque. Explicabo, maiores, tempore, recusandae officiis excepturi tempora quod vitae fuga sunt ad molestias eos! Nemo voluptatem obcaecati, blanditiis soluta illo quam molestias impedit officia fuga? Odit voluptatem dolorem saepe inventore placeat, dolore eos ea eius reiciendis similique ab quae magnam excepturi id, perspiciatis molestias assumenda cupiditate quaerat totam doloribus esse iste. Molestiae voluptas accusantium ipsam possimus, quasi iusto aut iste earum rerum autem excepturi cupiditate aliquam consectetur accusamus porro beatae quod voluptatibus dolorum cumque voluptates repellat maxime distinctio! Quam facilis nulla iure deleniti ipsa velit dolore expedita voluptates dignissimos temporibus iste quibusdam rerum dolorem amet hic, sequi corporis fugiat blanditiis, minus soluta harum molestias a impedit ipsam. Sit, aut. Dolorum rem praesentium, excepturi similique minima culpa neque, nihil nisi repellendus corrupti maxime molestias. Consequatur officiis enim facere laborum. Unde, nostrum tempore dolore autem ea temporibus?</p>
+            <a href="#">read more</a>
+
+        </div>
+    </section>
+<script src="app.js" type="text/javascript"></script>
+<script type="text/javascript">
+ScrollOut({
+    targets: 'h2,h3,p,a'
+})
+</script>
+</body>
+</html>
